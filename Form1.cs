@@ -45,7 +45,16 @@ namespace payment
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-        text_Ratio.Text = comboBox1.SelectedValue.ToString();
+            try
+            {
+
+
+                text_Ratio.Text = comboBox1.SelectedValue.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("are you sure to close");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
